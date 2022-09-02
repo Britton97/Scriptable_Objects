@@ -11,7 +11,7 @@ public class Food : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        brain.activeFoods.Remove(this.gameObject);
+        brain.activeFoods.Remove(this);
         Destroy(this.gameObject);
     }
 }

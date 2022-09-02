@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flock_Brain : MonoBehaviour
 {
     [Header("General Spawning")]
-    [SerializeField, Range(5,50)] private float spawnRadius = 20;
+    [SerializeField, Range(5,50)] public float spawnRadius = 20;
 
     [Header("Boid Settings")]
     [SerializeField, Range(1,100)] private int boid_amount = 5;
@@ -15,7 +15,7 @@ public class Flock_Brain : MonoBehaviour
     [Header("Food Settings")]
     [SerializeField, Range(1,500)] private int food_amount = 50;
     [SerializeField] private GameObject food;
-    public List<GameObject> activeFoods = new List<GameObject>();
+    public List<Food> activeFoods = new List<Food>();
 
     private void Awake()
     {
@@ -59,7 +59,7 @@ public class Flock_Brain : MonoBehaviour
             GameObject thisObj = Instantiate(food, transform.position, Quaternion.identity);
             thisObj.transform.position = objPos;
             thisObj.transform.rotation = Random.rotation;
-            activeFoods.Add(thisObj);
+            activeFoods.Add(thisObj.GetComponent<Food>());
         }
     }
 

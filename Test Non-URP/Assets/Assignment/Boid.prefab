@@ -87,6 +87,7 @@ MonoBehaviour:
   turnLimiter: 0.9
   boidBehaviors:
   - {fileID: 11400000, guid: 13a566912e6641d40acd8b67f784bbd5, type: 2}
+  - {fileID: 11400000, guid: 85fcdf163ed7af247a01116298422714, type: 2}
   drawDirections: 0
 --- !u!54 &3929662237250494748
 Rigidbody:
