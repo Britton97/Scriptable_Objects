@@ -10,7 +10,7 @@ public class Flock_Brain : MonoBehaviour
     [Header("Boid Settings")]
     [SerializeField, Range(1,100)] private int boid_amount = 5;
     [SerializeField] private GameObject boid;
-    private List<Solo_Boid> activeBoids = new List<Solo_Boid>();
+    public List<Solo_Boid> activeBoids = new List<Solo_Boid>();
 
     [Header("Food Settings")]
     [SerializeField, Range(1,500)] private int food_amount = 50;
@@ -51,7 +51,7 @@ public class Flock_Brain : MonoBehaviour
         }
     }
 
-    private void SpawnFood()
+    public void SpawnFood()
     {
         for (int i = 0; i < food_amount; i++)
         {

@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1241701417644921064}
+  - component: {fileID: 1945353647411452901}
   - component: {fileID: 1905225437066512977}
   - component: {fileID: 656185661573612038}
-  - component: {fileID: 1945353647411452901}
   - component: {fileID: 3929662237250494748}
   m_Layer: 0
   m_Name: Boid
@@ -38,6 +38,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1945353647411452901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905225437066512978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9910b49ebc922d84ab1c6d11fd58dcc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  turnLimiter: 0.9
+  boidBehaviors:
+  - {fileID: 11400000, guid: 3a77078987fd1554ebd21a67460eadb1, type: 2}
+  - {fileID: 11400000, guid: 85fcdf163ed7af247a01116298422714, type: 2}
+  - {fileID: 11400000, guid: 13a566912e6641d40acd8b67f784bbd5, type: 2}
+  drawDirections: 0
 --- !u!95 &1905225437066512977
 Animator:
   serializedVersion: 4
@@ -71,24 +90,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.57
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1945353647411452901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905225437066512978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9910b49ebc922d84ab1c6d11fd58dcc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  turnLimiter: 0.9
-  boidBehaviors:
-  - {fileID: 11400000, guid: 13a566912e6641d40acd8b67f784bbd5, type: 2}
-  - {fileID: 11400000, guid: 85fcdf163ed7af247a01116298422714, type: 2}
-  drawDirections: 0
 --- !u!54 &3929662237250494748
 Rigidbody:
   m_ObjectHideFlags: 0
